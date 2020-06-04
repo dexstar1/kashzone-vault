@@ -1,0 +1,141 @@
+.section{
+    padding: 70px 0;
+    position: relative;
+    background-color: #FFFFFF;
+    &.no-padding {
+        padding: 0;
+    }
+    .section-right-bg {
+        position: absolute;
+        z-index: 1;
+        top: -40%;
+        right: 0;
+        img {
+            max-width: 700px;
+        }
+    }
+}
+.section-with-space{
+    padding: 60px 0;
+}
+.section-white{
+    background-color: $white-color;
+}
+.section-light-background{
+    background-color: $light-background-color;
+}
+.page-header,
+.carousel-caption{
+    .title,
+    .info-title{
+        color: $white-color;
+    }
+}
+[class*="features-"],
+[class*="team-"],
+[class*="projects-"],
+[class*="pricing-"],
+[class*="testimonials-"],
+[class*="contactus-"]{
+    padding: 80px 0;
+}
+.section-image{
+    background-position: center center;
+    background-size: cover;
+
+    &:before{
+        background-color: rgba(0, 0, 0, 0.3);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+    & .container, & .content, & .container-fluid{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.section-image-no-bg{
+    background-position: center center;
+    background-size: cover;
+
+    &:before{
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+    & .container, & .content, & .container-fluid{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.section-image-primary-bg{
+    background-position: center center;
+    background-size: cover;
+
+    &:before{
+        background-color: rgba(91, 85, 255, 0.8);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+    & .container, & .content, & .container-fluid{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.section-image-secondary-bg{
+    background-position: center center;
+    background-size: contain;
+
+    &:before{
+        background-color: rgba(30, 144, 255, 0.8);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
+    & .container, & .content, & .container-fluid{
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.section-login{
+    min-height: 700px;
+}
+
+
+.section .subscribe-panel {
+    background-color: $light-background-color;
+    height: 300px;
+    padding-top: 70px;
+}
+
+.section .about-panel {
+    padding-top: 50px;
+    height: 300px;
+    background-position: center;
+    background-size: cover;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  </head>
+  <body>
+    <div class="col-md-6 m-auto main">
+      <div class="card card-body mt-5 shadow">
+        <div class="text-center">
+          <h2>Activation Code</h2>
+          <div class="alert-body">
+            <p>
+              Hello {{ email_id }} Proceed with your account creation with the
+              activation code below:
+            </p>
+            <div>
+              <h3>
+                <strong>{{ auth_code }}</strong>
+              </h3>
+            </div>
+          </div>
+
+          <small class="footer"
+            >You're receiving this email because your email address was
+            submitted for user account creation on <a href="#">Vault24.com</a>,
+            if this wasn't you. Kindly ignore this mail. Thank you.</small
+          >
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

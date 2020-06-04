@@ -1,0 +1,131 @@
+textarea {
+  resize: none;
+}
+input, textarea, select, button {
+  font-family: "Muli-Regular";
+  font-size: 15px;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  &:hover, &:focus {
+      color: initial !important;
+  }
+}
+textarea {
+  resize: none;
+}
+
+/*           Font Smoothing      */
+.title-uppercase{
+    text-transform: uppercase;
+}
+blockquote small{
+    font-style: normal;
+}
+.text-xbg {
+    font-size: $font-xbg-size;
+}
+.text-bg {
+    font-size: $font-bg-size;
+}
+.text-md {
+    font-size: $font-md-size !important;
+}
+.text-sm {
+    font-size: $font-sm-size !important;
+}
+.text-xs {
+    font-size: $font-xs-size !important;
+}
+
+* .text-primary, .text-primary:hover{
+    color: $primary-color !important;
+}
+* .text-secondary, .text-info:hover{
+    color: $secondary-color !important;
+}
+.text-blue-badge, .text-blue-badge:hover{
+    color: $blue-badge-color !important;
+}
+.text-blue-black, .text-blue-black:hover{
+    color: $blue-black-color !important;
+}
+.text-white, .text-white:hover{
+    color: $white-color !important;
+}
+.text-danger, .text-danger:hover{
+    color: $danger-color !important;
+}
+.text-gray, .text-gray:hover{
+    color: $gray-color !important;
+}
+.text-link, .text-link:hover{
+    color: $link-color !important;
+}
+.text-whatsapp, .text-whatsapp:hover{
+    color: $whatsapp-color !important;
+}
+.glyphicon{
+    line-height: 1;
+}
+
+// Pulsing Heart (footer)
+.heart {
+  color: #EB5E28;
+  animation: heathing 1s ease infinite,;
+}
+
+@keyframes heathing {
+  0% { transform: scale( .75 ); }
+  20% { transform: scale( 1 ); }
+  40% { transform: scale( .75 ); }
+  60% { transform: scale( 1 ); }
+  80% { transform: scale( .75 ); }
+  100% { transform: scale( .75 ); }
+}
+
+.blink_me {
+  animation: blinker 3s linear infinite;
+}
+
+@keyframes blinker {  
+  70% { opacity: 0; }
+}
+
+.footer .credits,
+.footer-nav{
+    line-height: 85px;
+}
+.footer .btn{
+    margin-bottom: 0;
+}
+.blockquote{
+    border-left: 0 none;
+    border-bottom: 1px solid #CCC5B9;
+    border-top: 1px solid #CCC5B9;
+    font-weight: 300;
+    margin: 15px 0 10px;
+    text-align: center;
+}
+.title{
+    margin-top: 30px;
+    margin-bottom: 25px;
+    min-height: 32px;
+}
+.title.text-center{
+    margin-bottom: 50px;
+}
+
+p.no-margin {
+    margin-top: 0;
+    margin-bottom: 0;
+}

@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %} {% load bootstrap4 %} {% block logn %}active
+{% endblock %} {% load static %} {% load i18n %} {% block content %}
+<div class="col-md-4 m-auto login-box">
+  <div style="color:black" class="card card-body mt-5 shadow">
+    <h2 class="text-center">
+      <strong>Admin Login</strong>
+    </h2>
+    <br />
+    <br />
+    <form class="login" method="POST" action="{% url 'login' %}">
+      {% csrf_token %} {% bootstrap_form form %}
+      <button type="submit" class="btn btn-primary btn-block login-button">
+        Login
+      </button>
+      <input type="hidden" name="next" value="{{ next }}" />
+      <br />
+      <p class="text-center">
+        <b>Forgot Password? Contact IT department to reset</b>
+      </p>
+    </form>
+  </div>
+</div>
+<footer>
+  <b>Powered by <a href="https://google.com">Addosser Microfinance Bank</a></b>
+</footer>
+
+{% endblock %}

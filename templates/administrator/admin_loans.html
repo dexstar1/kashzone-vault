@@ -1,0 +1,76 @@
+{% extends "base_generic_ii.html" %} {% load bootstrap4 %} {% block logn %}
+active {% endblock %} {% load static %} {% load i18n %} {% load widget_tweaks %}
+{% load pagination_tags %} {% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="h2">Loan Management Board</h1>
+    <div class="btn-toolbar mb-2 mb-md-0">
+      <div class="btn-group mr-2">
+        <button class="btn btn-sm btn-outline-secondary">Share</button>
+        <button class="btn btn-sm btn-outline-secondary">Export</button>
+      </div>
+      <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
+        <span data-feather="calendar"></span>
+        This week
+      </button>
+    </div>
+  </div>
+
+  <h2>Loans</h2>
+  <form method="GET" class="form-inline">
+    {% csrf_token %}
+    <div class="form-group">
+      <label style="margin-right: 20px">Filter: </label>
+      {% render_field filter.form.status class="form-control"%}
+      <label style="margin-left: 20px; margin-right: 10px;">From </label>
+      {% render_field filter.form.start_date class="form-control" %}
+      <button style="margin-left: 10px" class="btn btn-primary btn-md">
+        GO
+      </button>
+    </div>
+  </form>
+  <br />
+
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Disburse date</th>
+          <th>Amount</th>
+          <th>Tenure</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% autopaginate filter.qs 20 as f %} {% for application in f %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>
+            <a
+              class="loan-link"
+              href="{% url 'applicants-profile' application.owner.phone_number %}"
+            >
+              {{ application.owner }}</a
+            >
+          </td>
+          <td>{{ application.start_date }}</td>
+          <td>₦{{ application.loan_amount }}</td>
+          <td>{{ application.loan_period }} days</td>
+          <td>
+            <span class="badge badge-secondary">{{ application.status }}</span>
+          </td>
+          <td></td>
+        </tr>
+        {% endfor %} {% paginate %}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+{% endblock %}

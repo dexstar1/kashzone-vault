@@ -1,0 +1,94 @@
+.btn-link {
+  border-color: transparent !important;
+  /*padding: 10px;*/
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+    border-color: transparent;
+  }
+}
+.btn {
+  font-size: $font-size;
+}
+
+.btn.btn-link:focus {
+  box-shadow: none !important;
+  text-decoration: none;
+}
+
+.btn-round {
+  border-radius: 30px !important;
+}
+
+// Apply the mixin to the buttons
+.btn-primary {
+  @include btn-styles($primary-color, $white-color);
+}
+.btn-viseral {
+  @include btn-styles($viseral-color, $white-color);
+}
+
+.btn-light-background {
+  @include btn-styles($light-background-color, $primary-color);
+}
+.btn-secondary {
+  @include btn-styles($secondary-color, $white-color);
+}
+.btn-app-gradient {
+  @include btn-gradient($primary-color, $link-color);
+}
+.btn-transparent {
+  @include btn-styles(rgba(0, 0, 0, 0.3), $white-color);
+  border-color: none !important;
+}
+
+.btn-no-border {
+  border-radius: 0 !important;
+}
+
+.btn-just-icon {
+  &.btn-sm {
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    /*padding: 0;*/
+
+    i {
+      font-size: $btn-icon-font-size;
+    }
+  }
+  &.btn-lg {
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+    padding: 13px;
+
+    i {
+      font-size: 18px;
+      padding: 0;
+    }
+  }
+}
+
+.btn-social {
+  width: 40px !important;
+  height: 40px !important;
+  background: $gray-color;
+  color: $white-color;
+  padding: 10px;
+  i {
+    font-size: 14px !important;
+  }
+}
+
+.btn-circle {
+  border-radius: 50% !important;
+}
+
+.btn-number {
+  height: 19px;
+  width: 19px;
+  padding: 0 !important;
+}

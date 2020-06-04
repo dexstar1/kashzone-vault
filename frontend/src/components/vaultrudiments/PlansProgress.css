@@ -1,0 +1,47 @@
+.plancard {
+  background-color: #eee;
+  box-sizing: border-box;
+  height: 11em;
+  margin: 0.5em;
+  padding: 1em;
+  position: relative;
+  width: 20em;
+  border-radius: 10px;
+}
+
+.planprogress {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.planprogress:before {
+  animation: slideIn 2s ease-out;
+  background-color: #8fbc8f;
+  bottom: 0;
+  left: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.plancontent {
+  position: relative;
+}
+
+.planpercentage {
+  text-align: right;
+}
+
+@keyframes slideIn {
+  0% {
+    background-color: #abc;
+    width: 0;
+  }
+  100% {
+    background-color: #8fbc8f;
+    width: 100%;
+  }
+}

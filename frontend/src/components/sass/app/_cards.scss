@@ -1,0 +1,63 @@
+.card {
+  border-radius: $border-radius-card;
+  box-shadow: 1px 1px 20px 1px rgba(33, 33, 33, 0.2);
+  -webkit-box-shadow: 1px 1px 20px 1px rgba(33, 33, 33, 0.2);
+  -moz-box-shadow: 1px 1px 20px 1px rgba(33, 33, 33, 0.2);
+  -o-box-shadow: 1px 1px 20px 1px rgba(33, 33, 33, 0.2);
+  -ms-box-shadow: 1px 1px 20px 1px rgba(33, 33, 33, 0.2);
+  border: 0 none;
+
+  &.no-shadow {
+    box-shadow: none !important;
+  }
+
+  &.property-card {
+    margin-bottom: 30px 10px;
+    cursor: pointer;
+  }
+
+  &.features-card {
+    border-radius: 10px;
+    min-height: auto !important;
+    height: auto;
+    padding: 20px !important;
+
+    .left-img {
+      max-width: 70px;
+    }
+  }
+
+  .card-img {
+    max-height: 200px;
+    height: 200px;
+    /* background-position: center;
+		background-repeat: no-repeat; */
+    /* background-size: 100% 100%; */
+  }
+
+  .card-content {
+    padding: 25px;
+  }
+
+  .card-footer {
+    padding: 15px;
+    background: $white-color;
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+div.features-card {
+  padding: 20px !important;
+}
+
+.card-primary {
+  background-color: $primary-color !important;
+}
+
+.card-white {
+  background-color: $white-color !important;
+}

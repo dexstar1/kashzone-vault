@@ -1,0 +1,20 @@
+{% extends "base_generic_ii.html" %} {% load bootstrap4 %} {% block logn %}
+active {% endblock %} {% load static %} {% load i18n %} {% block content %}
+
+<div class="col-md-4 m-auto login-box">
+  <div style="color:black" class="card card-body mt-5 shadow">
+    <h2 class="text-center">
+      <strong>Verification Error!!!</strong>
+    </h2>
+    <br />
+    <p style="color: red">
+      You're not authorized to view this page. Contact IT Department to issue a
+      token.
+    </p>
+  </div>
+</div>
+<footer>
+  <b>Powered by <a href="https://google.com">Addosser Microfinance Bank</a></b>
+</footer>
+
+{% endblock %}

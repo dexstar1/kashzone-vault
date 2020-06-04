@@ -1,0 +1,165 @@
+// Mixin for generating new styles
+@mixin btn-styles($btn-color, $btn-font-color) {
+    background-color: $btn-color !important;
+    border-color: $btn-color !important;
+    color: $btn-font-color !important;
+    /*@include opacity(1);*/
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle{
+        background-color: $btn-color !important;
+        color: $btn-font-color !important;
+        border-color: $btn-color;
+    }
+
+    .caret{
+        border-top-color: $white-color;
+    }
+
+    &.btn-link {
+        color: $btn-color !important;
+        background-color: $transparent-bg !important;
+
+        border: none !important;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle{
+            background-color: $transparent-bg;
+            color: $btn-color;
+            border: none !important;
+        }
+
+        .caret{
+            border-top-color: $btn-color;
+        }
+    }
+
+    &.btn-no-border {
+        border-radius: 0 !important;
+    }
+
+    &.btn-circle {
+        border-radius: 50% !important;
+    }
+
+    &.btn-number {
+        height: 19px !important;
+        width: 19px !important;
+        padding: 0 !important;
+    }
+
+    .caret{
+      border-top-color: $white-color;
+    }
+}
+
+@mixin btn-gradient($btn-color, $btn-second-color) {
+    background: $btn-color;
+    background: linear-gradient(180deg, $btn-color, $btn-second-color);
+    border: 0 !important;
+    color: $white-color !important;
+    /*@include opacity(1);*/
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .show > &.dropdown-toggle{
+        background-color: $btn-color !important;
+        color: $white-color !important;
+        border-color: $btn-color;
+    }
+
+    .caret{
+        border-top-color: $white-color;
+    }
+
+    &.btn-link {
+        color: $btn-color !important;
+
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        .open > &.dropdown-toggle{
+            background-color: $transparent-bg !important;
+            color: $btn-color !important;
+        }
+
+        .caret{
+            border-top-color: $btn-color;
+        }
+    }
+
+    &.btn-no-border {
+        border-radius: 0 !important;
+    }
+
+    &.btn-circle {
+        border-radius: 50% !important;
+    }
+
+    &.btn-number {
+        height: 19px;
+        width: 19px;
+        padding: 0 !important;
+    }
+
+    .caret{
+      border-top-color: $white-color;
+    }
+}
+
+@mixin btn-outline-styles($btn-color, $btn-states-color){
+    border-color: $btn-color !important;
+    color: $btn-color !important;
+    @include opacity(1);
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+      background-color: $btn-color;
+      color: $fill-font-color;
+      border-color: $btn-color;
+      .caret{
+          border-top-color: $fill-font-color;
+      }
+    }
+
+    .caret{
+        border-top-color: $white-color;
+    }
+
+    &.disabled,
+    &:disabled,
+    &[disabled],
+    fieldset[disabled] & {
+      &,
+      &:hover,
+      &:focus,
+      &.focus,
+      &:active,
+      &.active {
+        background-color: $transparent-bg;
+        border-color: $btn-color;
+      }
+    }
+}
+
+@mixin btn-size($padding-vertical, $padding-horizontal, $font-size, $line-height){
+   font-size: $font-size;
+   padding: $padding-vertical $padding-horizontal;
+
+   &.btn-simple{
+       padding: $padding-vertical + 2 $padding-horizontal;
+   }
+
+}

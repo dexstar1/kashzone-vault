@@ -1,0 +1,60 @@
+{% extends "base_generic_ii.html" %} {% load bootstrap4 %} {% block logn %}
+active {% endblock %} {% load static %} {% load i18n %} {% load widget_tweaks %}
+{% load pagination_tags %} {% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="h2">Users</h1>
+  </div>
+
+  <h2>Profile Lookup</h2>
+  <br />
+
+  <form method="GET" class="form-inline">
+    {% csrf_token %}
+    <div class="form-group">
+      <label style="margin-right: 20px">Phone number: </label>
+      {% render_field filter.form.phone_number class="form-control"%}
+      <label style="margin-left: 20px; margin-right: 10px;">Email </label>
+      {% render_field filter.form.email class="form-control" %}
+      <button style="margin-left: 10px" class="btn btn-primary btn-md">
+        <i class="fas fa-search"></i> SEARCH
+      </button>
+    </div>
+  </form>
+  <br />
+  <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Sex</th>
+          <th>Vault Ratings</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% autopaginate filter.qs 20 as f %} {% for user in f %}
+        <tr>
+          <td>{{ forloop.counter }}</td>
+          <td>{{ user.fullname }}</td>
+          <td>{{ user.email }}</td>
+          <td>Male</td>
+          <td>N/A</td>
+          <td>
+            <a href="{% url 'user-profile' user.phone_number %}"
+              ><button class="btn btn-primary btn-sm">View profile</button></a
+            >
+          </td>
+        </tr>
+        {% endfor %} {% paginate %}
+      </tbody>
+    </table>
+  </div>
+</main>
+
+{% endblock %}

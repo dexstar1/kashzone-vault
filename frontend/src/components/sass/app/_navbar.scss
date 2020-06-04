@@ -1,0 +1,50 @@
+.navbar{
+    height: 70px;
+    border: 0;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    padding: 0;
+    background: $white-color;
+    box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.15);
+    padding: 20px 40px;
+
+    .navbar-brand img {
+    	width: 30px;
+    	height: 30px;
+    }
+
+    .navbar-brand .navbar-title {
+        font-weight: bolder;
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    .navbar-nav {
+
+    	.nav-link, .nav-link-btn {
+    		font-size: $nav-link-font-size;
+    	}
+
+	    a.nav-link {
+	    	color: $gray-color;
+	    }
+
+        a.nav-link.active {
+            color: $blue-badge-color;
+        }
+
+    	.nav-item {
+    		padding-left: 15px;
+    		padding-right: 15px;
+    	}
+    }
+
+    .navbar-collapse.show {
+        background: #fff !important;
+        position: absolute;
+        right: 0 !important;
+        top: 70px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}

@@ -1,0 +1,27 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+pylint = "*"
+autopep8 = "*"
+
+[packages]
+django = "*"
+djangorestframework = "*"
+django-rest-knox = "*"
+phonenumbers = "*"
+requests = "*"
+pycrypto = "*"
+rave-python = "*"
+django-bootstrap4 = "*"
+django-filter = "*"
+django-widget-tweaks = "*"
+django-autoslug = "*"
+django-pagination-bootstrap = "*"
+celery = "*"
+django-celery-email = "*"
+
+[requires]
+python_version = "3.6"

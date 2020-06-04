@@ -1,0 +1,163 @@
+{% extends "base_generic_ii.html" %} {% load bootstrap4 %} {% block logn %}
+active {% endblock %} {% load static %} {% load i18n %} {% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="h2">Vault statistics</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>Total amount held in wallet:</h5>
+        </div>
+        <div class="card-body">
+          <br />
+          <h4 class="text-center">
+            <strong> ₦{{ nwb }}</strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>Total amount in plans (locked in):</h5>
+        </div>
+        <div class="card-body">
+          <br />
+
+          <h4 class="text-center">
+            <strong>₦{{ taml }} </strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>
+            Total amount in plans (not locked in):
+          </h5>
+        </div>
+        <div class="card-body">
+          <br />
+
+          <h4 class="text-center">
+            <strong> ₦{{ tamnl }} </strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>Overall sum in Vault:</h5>
+        </div>
+        <div class="card-body">
+          <br />
+          <h4 class="text-center">
+            <strong> ₦{{ ovrsv }} </strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>Users stats</h5>
+        </div>
+        <div class="card-body">
+          <h5>
+            Numbers of registerd users:
+            <strong class="stat-value"> {{ users }}</strong>
+          </h5>
+          <br />
+          <h5>
+            Numbers of users online:
+            <strong class="stat-value"> N/A </strong>
+          </h5>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>
+            All time transaction volume:
+          </h5>
+        </div>
+        <div class="card-body">
+          <br />
+
+          <h4 class="text-center">
+            <strong> {{ trans_volume }} transactions</strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card-header">
+        <h5>All time processed transaction amount:</h5>
+      </div>
+      <div class="card shadow">
+        <div class="card-body">
+          <br />
+
+          <h4 class="text-center">
+            INFLOW:<strong> ₦{{ inflow }} </strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>All time processed transaction amount:</h5>
+        </div>
+        <div class="card-body">
+          <br />
+
+          <h4 class="text-center">
+            INTRA:<strong> ₦{{ intra }} </strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card shadow">
+        <div class="card-header">
+          <h5>All time processed transaction amount:</h5>
+        </div>
+        <div class="card-body">
+          <br />
+
+          <h4 class="text-center">
+            OUTFLOW:<strong> ₦{{ outflow }} </strong>
+          </h4>
+          <br />
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}

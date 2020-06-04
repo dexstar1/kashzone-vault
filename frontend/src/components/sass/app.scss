@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+//@import '~ngx-bar-rating/themes/br-default-theme';
+body,
+pre,
+input,
+button,
+select {
+  font-family: "Source Sans Pro", sans-serif !important;
+}
+@import "app/variables";
+@import "app/mixins";
+@import "app/buttons";
+@import "app/sections";
+@import "app/navbar";
+@import "app/typography";
+@import "app/inputs";
+@import "app/cards";
+@import "app/carousel";
+@import "app/general";
+@import "app/responsive";
+@import "app/registration";
+@import "app/footer";

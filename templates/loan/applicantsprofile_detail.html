@@ -1,0 +1,83 @@
+{% extends "base_generic_ii.html" %} {% load bootstrap4 %} {% block logn %}
+active {% endblock %} {% load static %} {% load i18n %} {% load widget_tweaks %}
+{% load pagination_tags %} {% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="h2">Loan Management Board</h1>
+  </div>
+
+  <h2>Applicant's profile</h2>
+  <div class="col-sm-8 offset-2">
+    <div class="card shadow">
+      <div class="card-header">
+        <b>{{ object.full_name }} </b>
+      </div>
+      <div class="card-body">
+        <table>
+          <tbody>
+            <tr>
+              <th>Name:</th>
+              <td>{{ object.full_name }}</td>
+              <th>Wallet ID:</th>
+              <td>{{ object.phone_number }}</td>
+            </tr>
+            <tr>
+              <th>Primary email:</th>
+              <td>{{ object.primary_email }}</td>
+              <th>Phone number:</th>
+              <td>{{ object.phone_number }}</td>
+            </tr>
+            <tr>
+              <th>Bank Name:</th>
+              <td>{{ object.bank_name }}</td>
+              <th>Bank Account No:</th>
+              <td>{{ object.bank_account }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <h2>Loan history:</h2>
+  <div class="col-sm-8 offset-2">
+    <div class="card shadow">
+      <div class="card-header">
+        <b>HISTORY</b>
+      </div>
+      <div class="card-body">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Disburse date</th>
+              <th>Amount</th>
+              <th>Tenure</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          {% for loan in object.owner.applications.all %}
+
+          <tbody>
+            <tr>
+              <td>{{ forloop.counter }}</td>
+              <td>{{ loan.start_date }}</td>
+              <td>₦{{ loan.loan_amount }}</td>
+              <td>{{ loan.loan_period }} days</td>
+              <td>
+                <span class="badge badge-secondary">{{ loan.status }}</span>
+              </td>
+              <td></td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

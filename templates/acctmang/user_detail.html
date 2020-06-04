@@ -1,0 +1,87 @@
+{% extends "base_generic_ii.html" %} {% load bootstrap4 %} {% block logn %}
+active {% endblock %} {% load static %} {% load i18n %} {% load widget_tweaks %}
+{% load pagination_tags %} {% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="h2">User</h1>
+  </div>
+
+  <h2>Vault profile</h2>
+  <div class="col-sm-8 offset-2">
+    <div class="card shadow">
+      <div class="card-header">
+        <b>{{ object.fullname }} </b>
+      </div>
+      <div class="card-body">
+        <table>
+          <tbody>
+            <tr>
+              <th>Full Name:</th>
+              <td>{{ object.fullname }}</td>
+              <th>Wallet ID:</th>
+              <td>{{ object.phone_number }}</td>
+            </tr>
+            <tr>
+              <th>Primary email:</th>
+              <td>{{ object.email }}</td>
+              <th>Phone number:</th>
+              <td>{{ object.phone_number }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <br />
+  <br />
+  <div class="col-sm-8 offset-2">
+    <div class="card shadow">
+      <div class="card-header">
+        <b>WALLET HISTORY</b>
+      </div>
+      <br />
+      <b class="balance" style="text-align: center"
+        >WALLET BALANCE: ₦{{ object.wallets.balance }}</b
+      >
+      <div class="card-body">
+        <table class="table table-striped table-sm">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>TImestamp</th>
+              <th>Type</th>
+              <th
+                style="cursor: pointer"
+                data-toggle="tooltip"
+                data-placement="right"
+                title="Vault Balance After each Transaction"
+              >
+                VBAT
+              </th>
+            </tr>
+          </thead>
+
+          {% autopaginate object.actions.all 20 as a %} {% for activity in a %}
+
+          <tbody>
+            <tr>
+              <td>
+                {{ forloop.counter }}
+              </td>
+              <td>{{ activity.timestamp }}</td>
+              <td>
+                <span class="badge badge-secondary">{{ activity.ttype }}</span>
+              </td>
+              <td>₦{{ activity.debug_balance }}</td>
+            </tr>
+            {% endfor %} {% paginate %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

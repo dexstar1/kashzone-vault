@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <meta
+      name="description"
+      content="Vault24 is a simple, secure eFinancial tool. With flexible savings and investment plans, Vault helps you achieve your predetermined savings goals,earn and grow your finances. Send and Receieve money."
+    />
+    <title>Savings and Investment can be simpler - Vault 24</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    <script src="https://kit.fontawesome.com/c8c9028de4.js"></script>
+  </head>
+  <body>
+    <section class="asection">
+      <nav class="navbar navbar-expand-lg navbar-light ">
+        <img class="vault-logo" src="{% static 'images/vaultlogoAW.svg' %}" />
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span>
+            <i
+              style="color: white; outline: none !important; "
+              class="fas fa-bars"
+            ></i>
+          </span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Save</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Invest</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Spend</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#">Earn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Deals & Offers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Loan</a>
+            </li>
+          </ul>
+
+          <aside class="user-action">
+            <a href="{% url 'app' %}" class="login">Login</a>
+
+            <a href="{% url 'app' %}#/register" class="sign-up">
+              Sign up
+            </a>
+          </aside>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-sm-6 awrapper">
+          <div class="text-container">
+            <h1>Grow your finances with Vault24</h1>
+            <p>Your complete ...</p>
+            <a href="{% url 'app' %}#/register" class="get-started"
+              >Get started</a
+            >
+          </div>
+        </div>
+        <div class="col-sm-6 a2wrapper">
+          <div class="image-container">
+            <img src="{% static  'images/lady.png' %}" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="save">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-sm-6 acontainer">
+            <div class="container-info">
+              <p class="eyebrow">SAVE</p>
+              <h2>Save better with goal oriented plans</h2>
+              <p class="body">
+                With flexible savings plans, Vault helps you achieve your
+                predetermined savings goals.
+              </p>
+              <a class="learn-more" href="#" title="">Learn more</a>
+            </div>
+          </div>
+          <div class="col-sm-6 list-container">
+            <div class="list">
+              <div class="item-container">
+                <div class="icon">
+                  <img
+                    src="https://sqy7rm.media.zestyio.com/invest_icon.svg"
+                    alt="icon"
+                  />
+                </div>
+                <div class="message-container">
+                  <p class="title">Save your spare change</p>
+                  <p class="description">
+                    Set aside the leftover change from everyday purchases by
+                    turning on automatic Little drops.
+                  </p>
+                </div>
+              </div>
+              <div class="item-container">
+                <div class="icon">
+                  <i style="color: #3d3d46;" class="fas fa-home"></i>
+                </div>
+                <div class="message-container">
+                  <p class="title">Rent plus</p>
+                  <p class="description">
+                    Need to pay rent? Get your next rent sorted out with Rent
+                    Plus plan
+                  </p>
+                </div>
+              </div>
+              <div class="item-container">
+                <div class="icon">
+                  <i style="color: #3d3d46;" class="fas fa-dot-circle"></i>
+                </div>
+                <div class="message-container">
+                  <p class="title">Target savings</p>
+                  <p class="description">
+                    Save towards speculative goals with Vault's Target Savings
+                    plan tailored just for you .
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="invest">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-sm-6 image-container">
+            <img
+              src="{% static  'images/invest.jpg' %}"
+              width="549px"
+              height="519px"
+            />
+          </div>
+          <div class="col-sm-6 message-container">
+            <p class="eyebrow">INVEST</p>
+            <h2>Simpler, smarter way to invest</h2>
+            <p class="body">
+              Put your money to work with Vault. Earn up to 25% per annum
+              interest on investment packages.
+            </p>
+            <a class="learn-more" href="#" title="">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="spend">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-sm-6 message-container">
+            <p class="eyebrow">SPEND</p>
+            <h2>Clever budgeting and more</h2>
+            <p class="body">
+              Budget your daily, monthly spendings with Vault. Get better deals
+              with these 50+ top brands that invest in you when you shop.
+            </p>
+            <a class="learn-more" href="#" title="">Learn more</a>
+          </div>
+          <div class="col-sm-6 image-container">
+            <img src="{% static  'images/holding.jpg' %}" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loans">
+      <div class="wrapper">
+        <div class="row">
+          <div class="col-sm-6 image-container">
+            <img src="{% static  'images/piggy2.jpg' %}" width="570px" />
+          </div>
+          <div class="col-sm-6 message-container">
+            <p class="eyebrow">LOANS</p>
+            <h2>Fly with Vault loans</h2>
+            <p class="body">
+              You need not to bail out of your savings plans when you have
+              emergencies, get a flat rate of 2% interest up to 90 days loan on
+              Vault.
+            </p>
+            <a class="learn-more" href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="site-footer">
+      <div class="wrapper">
+        <nav class="show-items">
+          <ul class="footer-links">
+            <li><a>Save</a></li>
+            <li><a>Deals & Offers</a></li>
+            <li><a>Invest</a></li>
+            <li><a>About</a></li>
+            <li><a>Spend</a></li>
+            <li><a>Legal</a></li>
+            <li><a>Earn</a></li>
+            <li><a>Careers</a></li>
+            <li><a>Loans</a></li>
+          </ul>
+
+          <a class="contact-support" href="#" title=""
+            >Need help? Get support<img
+              src="https://sqy7rm.media.zestyio.com/arrow-right.svg"
+              alt="right arrow"
+          /></a>
+        </nav>
+        <div class="copyright">
+          <p>
+            © 2019 Vault24 |
+            <span>
+              Addosser
+            </span>
+          </p>
+        </div>
+        <div class="disclosures visible">
+          <p>
+            Vault24, Vault24.com is a subsidiary of Addosser Microfinance Bank
+            Limited, incorporated on the 27th of May, 2008; with RC Number:
+            749526. Vault24.com provides financial services under a Cooperative
+            License with a registration number XXYYZZ. The aforemention
+            establishments are legal entities in Nigeria. Our investment
+            professionals invest savers funds in financial instruments and
+            manage the investments to ensure optimum return. To ensure security
+            of savers funds, assets are held by Meristem Trustees, a company
+            registered with the Security and Exchange Commission (SEC) on behalf
+            of savers. These assets are marked to market periodically to ensure
+            savers are protected.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="https://kit.fontawesome.com/c8c9028de4.js"></script>
+
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+</html>

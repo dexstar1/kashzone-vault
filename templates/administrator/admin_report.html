@@ -1,0 +1,71 @@
+{% extends "base_generic_ii.html" %} {% load bootstrap4 %} {% block logn %}
+active {% endblock %} {% load static %} {% load i18n %} {% block content %}
+
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div
+    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+  >
+    <h1 class="h2">Report</h1>
+  </div>
+  <div class="container">
+    <div class="row my-3">
+      <div class="col">
+        <h4>Vault24 Monthly Report: <b>MAY, 2019</b></h4>
+      </div>
+    </div>
+    <div class="row my-2">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <canvas id="chLine" height="300"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary">Prev</button>
+      &nbsp; &nbsp; &nbsp;
+      <button class="btn btn-primary">Next</button>
+    </div>
+  </div>
+  <hr />
+  <div>
+    <p>Other stats:</p>
+    <div class="row">
+      <div class="col-sm-3">
+        <div class="card-header">
+          <h5>Loans</h5>
+        </div>
+        <div class="card-body">
+          <h4 class="text-center">N/A</h4>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card-header">
+          <h5>Demographics</h5>
+        </div>
+        <div class="card-body">
+          <h4 class="text-center">N/A</h4>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card-header">
+          <h5>Resolved Complaints</h5>
+        </div>
+        <div class="card-body">
+          <h4 class="text-center">N/A</h4>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <div class="card-header">
+          <h5>User growth</h5>
+        </div>
+        <div class="card-body">
+          <h4 class="text-center">N/A</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+{% endblock %}
